@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*navigation*/
+#nav-bar{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar-brand img{
+  height: 50px;
+  padding-left: 20px;
+}
+
+.navbar-nav li{
+  padding: 0 10px;
+}
+.navbar-nav li a{
+  float: right;
+  text-align: left;
+}
+
+.navbar{
+  background: #fff;
+}
+
+.navbar-toggler{
+  border: none!important;
+}
+
+.nav-link{
+  color: #555!important;
+  font-weight: 600;
+  font-size: 16px;
+  border-bottom: 1px solid white;
+}
+.nav-link:hover{
+  border-bottom: 1px solid #f4c119;
+  color: #f4c119!important;
+}
+/*navigation*/
+
+/*slider*/
+#slider{
+  width: 100%;
+  background: url(src/kinder-slide-1.jpg);
+  transition: 0.5ms;
+}
+.carousel-caption{
+  bottom: initial!important;
+}
+.carousel-caption h5{
+  color: #069eed;
+  font-weight: 700;
+  font-size: 30px;
+}
+.carousel-caption h6{
+  color: #069eed;
+  font-weight: 500;
+  font-size: 20px;
+}
+/*slider*/
+
+/*about*/
+#about{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #555;
+}
+#about .btn{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: #f4c119;
+  border: #f4c119;
+}
+.about-content{
+  padding-top: 20px;
+}
+.btn-primary:focus{
+  color: white;
+  box-shadow: 0 0 0 0.2rem #f4c119;
+}
+/*about*/
+
+/*services*/
+#services{
+  background-image: url(src/texture_2.webp);
+  background-color: #f4c119;
+  color: white!important;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#services h3{
+  text-align: center;
+  padding-bottom: 10px;
+}
+#services h3::after{
+  content: '';
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
+/*services*/
+/*team*/
+#team{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #555;
+}
+#team h3{
+  text-align: center;
+  color: #555!important;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+}
+#team h3::after{
+  content: '';
+  background-color: white;
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
+
+/*group*/
+#group{
+  background-image: url(src/texture_2.webp);
+  background-color: #f4c119;
+  color: white!important;
+  background-attachment: fixed;
+  background-position: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#group h3{
+  text-align: center;
+  padding-bottom: 10px;
+}
+#group h3::after{
+  content: '';
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
+/*group*/
+
+/*contacts*/
+#contact{
+  background-color: #efefef;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #777;
+}
+#contact h3{
+  text-align: center;
+}
+.follow{
+  background: #fff;
+  padding: 10px;
+  margin: 15px;
+}
+#contact .row{
+  float: center;
+}
+/*contacts*/
