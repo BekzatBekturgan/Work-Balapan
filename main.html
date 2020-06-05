@@ -10,13 +10,32 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e83e3e26-9bf9-4093-97f3-79961d319027&lang=ru_RU" type="text/javascript"></script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [43.69524382274041, 51.331276029805025],
+            zoom: 17,
+            controls: []
+        });
+        var placemark = new ymaps.Placemark([43.69524382274041, 51.331276029805025],{
+          hintContent: '<div class = "hint-map">Балапан<br>Балабақшасы</div>',
+          balloonContent: '<div class = "balloon-map">Балабақша мекенжайы: Маңғыстау облысы,Мұнайлы ауданы Қызылтөбе селолық округі №2 орта мектеп ғимараты</div>',
+        },
+        {
+          preset: 'islands#yellowIcon'
+        });
+        myMap.geoObjects.add(placemark);
+    }
+</script>
   </head>
 
   <body>
     <!-- navigation part -->
     <section id = "nav-bar">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#"><img src="src/logo.webp" alt="not found"></a>
+        <a class="navbar-brand" href="http://balapan4.kz/"><img src="src/logo.webp" alt="not found"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -76,7 +95,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="src/Depositphotos_12359307_original.jpg" alt="" style="width: 200%;">
+            <img src="src/Depositphotos_12359307_original.jpg" alt="" style="width: 100%;">
           </div>
           <div class="col-md-6">
             <h2>Біз туралы</h2>
@@ -87,7 +106,7 @@
               Мемлекеттік кәсіпорынның қазақ тіліндегі қысқаша атауы:
               № 4 «Балапан» балабақшасы» МКҚК
             </div>
-            <button type="button" class="btn btn-primary" id = "all-buttons">Толығырақ</button>
+            <a href="#"><button type="button" class="all-buttons" id = "all-buttons">Толығырақ</button></a>
           </div>
         </div>
       </div>
@@ -135,81 +154,12 @@
       </div>
     </section>
     <!-- services -->
-    <!-- group
-    <section id = "group">
-      <div class="container">
-        <h3>Балабақша топтары</h3>
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <div class="single-price">
-              <div class="price-head">
-                <img src="src/baby.svg" style="width: 50px; height: 50px;">
-                <h4>3-қа жасқа дейінгі балалар</h4>
-              </div>
-              <div class="price-content">
-                <ul style="list-style: none;">
-                  <li>10 топ</li>
-                  <li>20 адамнан</li>
-                  <li>Ойындарға бағытталған</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center">
-            <div class="single-price">
-              <div class="price-head">
-                <img src="src/person.svg" style="width: 50px; height: 50px;">
-                <h4>3-4 жас аралығындағы балалар</h4>
-              </div>
-              <div class="price-content">
-                <ul style="list-style: none;">
-                  <li>7 топ</li>
-                  <li>15 адамнан</li>
-                  <li>Жазу, сурет салуға бағытталған</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center">
-            <div class="single-price">
-              <div class="price-head">
-                <img src="src/girl.svg" style="width: 50px; height: 50px;">
-                <h4>4-5 жас аралығындағы балалар</h4>
-              </div>
-              <div class="price-content">
-                <ul style="list-style: none;">
-                  <li>10 топ</li>
-                  <li>17 адамнан</li>
-                  <li>Оқу, сөйлеуге бағытталған</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 text-center">
-            <div class="single-price">
-              <div class="price-head">
-                <img src="src/hair.svg" style="width: 50px; height: 50px;">
-                <h4>5 жастан асқан балалар</h4>
-              </div>
-              <div class="price-content">
-                <ul style="list-style: none;">
-                  <li>5 топ</li>
-                  <li>10 адамнан</li>
-                  <li>Мектепке дайындау бағдарламасы</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    group-->
     <!-- contacts -->
     <section id = "contact">
       <div class="container">
         <h3>Байланыс ақпараты</h3>
         <div class="row">
-          <div class="col-md-6 contact-info">
+          <div class="col-md-6" id = "first-part-contact">
             <div class="follow">
               <div class = "row">
                 <div class="col-3 col-md-1 col-lg-1 align-self-center text-center">
@@ -257,12 +207,7 @@
             </div>   
           </div>
           <div class="col-md-6">
-            <div class="follow">
-              <div id="map" class="map">
-                <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru"></script>
-                <script src="main.js" type="text/javascript"></script>
-              </div>
-            </div>
+            <div id = "map" class = "my-map"></div> <!-- container for yandex map, js in head-->
           </div>
         </div>
       </div>

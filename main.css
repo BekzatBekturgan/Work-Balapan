@@ -69,18 +69,21 @@
   padding-bottom: 50px;
   color: #555;
 }
-#about .btn{
+.about-content{
+  padding-top: 20px;
+}
+.all-buttons{
   margin-top: 20px;
   margin-bottom: 30px;
   background-color: #f4c119;
   border: #f4c119;
+  border-radius: 2px;
+  color:white;
+  padding: 15px 32px;
+  font-weight: 600;
 }
-.about-content{
-  padding-top: 20px;
-}
-.btn-primary:focus{
-  color: white;
-  box-shadow: 0 0 0 0.2rem #f4c119;
+.all-buttons:focus{
+  
 }
 /*about*/
 
@@ -164,8 +167,16 @@
   background: #fff;
   padding: 10px;
   margin: 15px;
+  margin-bottom: 0px;
 }
-#contact .row{
-  float: center;
+.my-map{
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
 }
+.hint-map, .balloon-map{
+  color: #f4c119;
+  font-weight: bold;
+}
+
 /*contacts*/
