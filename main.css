@@ -1,6 +1,11 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: Gabriela;
+}
+@font-face{
+  font-family: Gabriela;
+  src: url(src/font-family/gabriela/Gabriela-Regular.ttf);
 }
 /*buttons*/
 .all-buttons{
@@ -37,7 +42,7 @@ a{
   z-index: 10;
 }
 .navbar-brand img{
-  height: 50px;
+  height: 30px;
   padding-left: 20px;
 }
 
@@ -88,12 +93,15 @@ a{
   font-weight: 500;
   font-size: 20px;
 }
+.carousel-item img{
+  height: 500px;
+}
 /*slider*/
 
 /*about*/
 #about{
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: #555;
 }
 .about-content{
@@ -108,8 +116,8 @@ a{
   color: white!important;
   background-attachment: fixed;
   background-position: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 #services h2{
   text-align: center;
@@ -123,49 +131,7 @@ a{
   margin: 20px auto 5px;
 }
 /*services*/
-/*team*/
-#team{
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: #555;
-}
-#team h3{
-  text-align: center;
-  color: #555!important;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #007bff;
-}
-#team h3::after{
-  content: '';
-  background-color: white;
-  display: block;
-  height: 3px;
-  width: 170px;
-  margin: 20px auto 5px;
-}
 
-/*group*/
-#group{
-  background-image: url(src/texture_2.webp);
-  background-color: #f4c119;
-  color: white!important;
-  background-attachment: fixed;
-  background-position: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-#group h3{
-  text-align: center;
-  padding-bottom: 10px;
-}
-#group h3::after{
-  content: '';
-  display: block;
-  height: 3px;
-  width: 170px;
-  margin: 20px auto 5px;
-}
-/*group*/
 
 /*contacts*/
 #contact{
@@ -189,9 +155,35 @@ a{
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .hint-map, .balloon-map{
   color: #f4c119;
   font-weight: bold;
 }
 
 /*contacts*/
+
+/* for mpbile*/
+@media screen and (max-device-width: 767px){
+  .my-map{
+    width: 100%;
+    height: 300px;
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .about-image{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+  .carousel-item img{
+    height: 300px;
+  }
+}
+@media screen and (max-device-width: 400px){
+  .carousel-item img{
+    height: 150px;
+  }
+}
+/* for mobile*/
