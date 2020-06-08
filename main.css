@@ -14,19 +14,17 @@
   margin-bottom: 30px;
   background-color: #f4c119;
   border: #f4c119;
-  border-radius: 15px;
+  border-radius: 20px;
   color:white;
   padding: 15px 32px;
   font-weight: 600;
-  border: 1px solid #fff;
-  transition: all 0.1s;
 }
 .all-buttons:hover{
-  background-color: #fff;
   color: #f4c119;
-  border-color: #f4c119;
+  background-color:white;
   border: 1px solid #f4c119;
-  font-weight: 600;
+  margin-bottom: 29px;
+  margin-top: 19px;
 }
 /*links*/
 a{
@@ -152,6 +150,10 @@ a{
 #services p:hover{
   color: #069eed;
   font-weight: 600;
+}
+#services img{
+  width: 70px;
+  height: 70px;
 }
 /*services*/
 
